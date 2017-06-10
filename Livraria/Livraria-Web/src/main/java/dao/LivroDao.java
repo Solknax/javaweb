@@ -1,21 +1,18 @@
 package dao;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
 import model.Livro;
-import util.FabricaConexao;
+import model.FabricaConexao;
 
 public class LivroDao {
 	Logger LOG = Logger.getGlobal();
 	private static final String OBTER_POR_ID_SQL = "SELECT AUTOR, TITULO, COD_LIVRO, IMAGEM, " + " PRECO, DESCRICAO FROM ESTOQUE WHERE COD_LIVRO = ? ";
 	private static final String CONSULTA_SQL = "SELECT COD_LIVRO, TITULO, AUTOR, PRECO, " + "IMAGEM, DESCRICAO FROM ESTOQUE WHERE TITULO LIKE ?";
-	
-	public Livro consulta(int codigo){
+		
+	public Livro consultar(int codigo){
 		Livro livro = null;
 		try(Connection conexao = FabricaConexao.getConexao(); PreparedStatement consulta = conexao.prepareStatement(OBTER_POR_ID_SQL);){
 			consulta.setInt(1, codigo);
@@ -58,5 +55,7 @@ public class LivroDao {
 		}
 		return lista;			
 	}
+	
+	
 	
 }

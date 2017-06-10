@@ -1,6 +1,6 @@
 package model;
 
-public class Livro {		
+public class Livro {
 	private	int	codigo;
 	private	String titulo;
 	private	String autor;
@@ -18,5 +18,6 @@ public class Livro {
 	public String getImagem(){return imagem;}
 	public void setImagem(String imagem){this.imagem = imagem;}
 	public String getDescricao(){return descricao;}
-	public void setDescricao(String descricao){this.descricao = descricao;}		
+	public void setDescricao(String descricao){this.descricao = descricao;}
+	
 }

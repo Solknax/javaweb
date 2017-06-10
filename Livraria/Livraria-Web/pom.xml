@@ -12,6 +12,25 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
+	</properties>	
+	
+	
+<!-- Postgresql Driver -->
+	<dependencies>
+	<dependency>
+		<groupId>postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>9.1-901-1.jdbc4</version>
+	</dependency>	
+
+<!-- Mojarra (implementação do JSF 2) -->
+	<dependency>
+		<groupId>org.glassfish</groupId>
+		<artifactId>javax.faces</artifactId>
+		<version>2.2.12</version>
+		<scope>compile</scope>
+	</dependency>	
+
+	</dependencies>
 
 </project>

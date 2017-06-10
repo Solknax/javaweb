@@ -8,5 +8,6 @@
   	<module>Livraria-Modelo</module>
   	<module>Livraria-Servico</module>
   	<module>Livraria-Web</module>
+  	<module>Lab-Framework</module>
   </modules>
 </project>
